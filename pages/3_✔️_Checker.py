@@ -1,6 +1,9 @@
 import streamlit as st
 import requests
-from bs4 import BeautifulSoup
+try:
+    from bs4 import BeautifulSoup
+except :
+    from BeautifulSoup import BeautifulSoup
 from urllib.parse import urljoin
 import asyncio
 
