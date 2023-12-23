@@ -12,10 +12,11 @@ st.write('It uses a recursive method to find the deadlinks, diving deep into the
 
 st.write('NEXT STOP: Please go to the Instructions option below to know how the Deadlink Checker works!')
 
+# Assuming 'pages' is directly inside the root directory
 pages_directory = os.path.abspath("pages")
+
+# Get a list of all Python files in the 'pages' directory
 page_files = [f for f in os.listdir(pages_directory) if f.endswith(".py")]
-
-
 
 # Run each page file
 for page_file in page_files:
@@ -24,3 +25,4 @@ for page_file in page_files:
     # Run the page module's main function if it exists
     if hasattr(page_module, "main"):
         page_module.main()
+
