@@ -12,8 +12,9 @@ st.write('It uses a recursive method to find the deadlinks, diving deep into the
 
 st.write('NEXT STOP: Please go to the Instructions option below to know how the Deadlink Checker works!')
 
-pages_directory = os.path.abspath("checker/pages")
+pages_directory = os.path.abspath("pages")
 page_files = [f for f in os.listdir(pages_directory) if f.endswith(".py")]
+
 
 
 # Run each page file
