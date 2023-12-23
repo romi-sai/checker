@@ -20,7 +20,7 @@ page_files = [f for f in os.listdir(pages_directory) if f.endswith(".py")]
 # Run each page file
 for page_file in page_files:
     # Import the page module dynamically
-    page_module = __import__(f"deadlinkchecker.pages.{page_file[:-3]}", fromlist=["*"])
+    page_module = __import__(f"pages.{page_file[:-3]}", fromlist=["*"])
     # Run the page module's main function if it exists
     if hasattr(page_module, "main"):
         page_module.main()
